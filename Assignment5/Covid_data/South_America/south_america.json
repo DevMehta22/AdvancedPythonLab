@@ -1,0 +1,17 @@
+[
+    {
+      "country": "Brazil",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 500000, "new": 5000 },
+      "deaths": { "total": 25000, "new": 100 },
+      "recovered": { "total": 480000, "new": 3000 }
+    },
+    {
+      "country": "Argentina",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 300000, "new": 4000 },
+      "deaths": { "total": 15000, "new": 200 },
+      "recovered": { "total": 285000, "new": 2500 }
+    }
+  ]
+  

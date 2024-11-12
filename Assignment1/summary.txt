@@ -1,0 +1,4 @@
+Total count:15
+valid entries:12
+Invalid entries:3
+{'product004': 4.333333333333333, 'product001': 3.2, 'product003': 3.0}

@@ -1,0 +1,17 @@
+[
+    {
+      "country": "Australia",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 10000, "new": 100 },
+      "deaths": { "total": 500, "new": 10 },
+      "recovered": { "total": 9500, "new": 50 }
+    },
+    {
+      "country": "New Zealand",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 5000, "new": 50 },
+      "deaths": { "total": 200, "new": 5 },
+      "recovered": { "total": 4700, "new": 30 }
+    }
+  ]
+  

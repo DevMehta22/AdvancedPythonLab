@@ -1,0 +1,15 @@
+2024-10-03 15:33:23,018 - INFO - User 'Dev' registered successfully.
+2024-10-03 15:33:37,108 - INFO - User 'DEVVV' registered successfully.
+2024-10-03 15:33:55,848 - WARNING - Invalid username:    
+2024-10-03 15:33:55,848 - WARNING - Signup attempt failed for username:    
+2024-10-03 15:34:11,348 - WARNING - Login failed for username: DEVVV due to incorrect password.
+2024-10-03 15:34:26,131 - WARNING - Login failed for username: DEVVV due to incorrect password.
+2024-10-03 15:36:54,397 - INFO - User 'Devmenhta' registered successfully.
+2024-10-03 15:37:09,520 - WARNING - Login failed for username: Devmenhta due to incorrect password.
+2024-10-03 15:37:40,905 - INFO - Program exited by the user.
+2024-10-03 15:42:11,541 - WARNING - Login failed for username: Devmenhta due to incorrect password.
+2024-10-03 15:43:34,504 - WARNING - Login failed for username: Devmenhta due to incorrect password.
+2024-10-03 15:44:05,349 - WARNING - Login failed for username: Devmenhta due to incorrect password.
+2024-10-03 15:44:46,558 - WARNING - Login failed for username: Devmenhta due to incorrect password.
+2024-10-03 15:46:12,649 - INFO - User 'Devmenhta' logged in successfully.
+2024-10-03 15:46:39,735 - INFO - Program exited by the user.

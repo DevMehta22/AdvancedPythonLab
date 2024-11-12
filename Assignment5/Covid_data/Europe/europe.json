@@ -1,0 +1,17 @@
+[
+    {
+      "country": "France",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 150000, "new": 1500 },
+      "deaths": { "total": 7000, "new": 30 },
+      "recovered": { "total": 145000, "new": 1000 }
+    },
+    {
+      "country": "Germany",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 120000, "new": 1000 },
+      "deaths": { "total": 6000, "new": 40 },
+      "recovered": { "total": 114000, "new": 800 }
+    }
+  ]
+  

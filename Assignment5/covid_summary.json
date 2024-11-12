@@ -1,0 +1,93 @@
+[
+    {
+        "country": "Brazil",
+        "total_cases": 500000,
+        "total_deaths": 25000,
+        "total_recovered": 480000,
+        "total_active_cases": -5000
+    },
+    {
+        "country": "Argentina",
+        "total_cases": 300000,
+        "total_deaths": 15000,
+        "total_recovered": 285000,
+        "total_active_cases": 0
+    },
+    {
+        "country": "Australia",
+        "total_cases": 10000,
+        "total_deaths": 500,
+        "total_recovered": 9500,
+        "total_active_cases": 0
+    },
+    {
+        "country": "New Zealand",
+        "total_cases": 5000,
+        "total_deaths": 200,
+        "total_recovered": 4700,
+        "total_active_cases": 100
+    },
+    {
+        "country": "India",
+        "total_cases": 300000,
+        "total_deaths": 15000,
+        "total_recovered": 290000,
+        "total_active_cases": -5000
+    },
+    {
+        "country": "Japan",
+        "total_cases": 200000,
+        "total_deaths": 10000,
+        "total_recovered": 190000,
+        "total_active_cases": 0
+    },
+    {
+        "country": "France",
+        "total_cases": 150000,
+        "total_deaths": 7000,
+        "total_recovered": 145000,
+        "total_active_cases": -2000
+    },
+    {
+        "country": "Germany",
+        "total_cases": 120000,
+        "total_deaths": 6000,
+        "total_recovered": 114000,
+        "total_active_cases": 0
+    },
+    {
+        "country": "USA",
+        "total_cases": 1000000,
+        "total_deaths": 50000,
+        "total_recovered": 950000,
+        "total_active_cases": 0
+    },
+    {
+        "country": "Canada",
+        "total_cases": 350000,
+        "total_deaths": 18000,
+        "total_recovered": 320000,
+        "total_active_cases": 12000
+    },
+    {
+        "country": "Antarctica",
+        "total_cases": 0,
+        "total_deaths": 0,
+        "total_recovered": 0,
+        "total_active_cases": 0
+    },
+    {
+        "country": "South Africa",
+        "total_cases": 200000,
+        "total_deaths": 10000,
+        "total_recovered": 190000,
+        "total_active_cases": 0
+    },
+    {
+        "country": "Nigeria",
+        "total_cases": 100000,
+        "total_deaths": 5000,
+        "total_recovered": 95000,
+        "total_active_cases": 0
+    }
+]

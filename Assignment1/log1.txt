@@ -1,0 +1,5 @@
+product001 cust01 2023-07-03 5 good
+product002 cust02 2023-07-04 4 better
+product003 cust01 2023-07-07 3 best
+product001 cust03 2023-07-04 2 worst
+product002 cust04 2023-07-07 1 awesome

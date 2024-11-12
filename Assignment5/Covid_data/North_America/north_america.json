@@ -1,0 +1,17 @@
+[
+    {
+      "country": "USA",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 1000000, "new": 10000 },
+      "deaths": { "total": 50000, "new": 200 },
+      "recovered": { "total": 950000, "new": 5000 }
+    },
+    {
+      "country": "Canada",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 350000, "new": 5000 },
+      "deaths": { "total": 18000, "new": 100 },
+      "recovered": { "total": 320000, "new": 4000 }
+    }
+  ]
+  

@@ -1,0 +1,17 @@
+[
+    {
+      "country": "India",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 300000, "new": 3000 },
+      "deaths": { "total": 15000, "new": 50 },
+      "recovered": { "total": 290000, "new": 2500 }
+    },
+    {
+      "country": "Japan",
+      "date": "2024-09-05",
+      "confirmed_cases": { "total": 200000, "new": 2000 },
+      "deaths": { "total": 10000, "new": 50 },
+      "recovered": { "total": 190000, "new": 1500 }
+    }
+  ]
+  
