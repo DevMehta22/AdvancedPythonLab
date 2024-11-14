@@ -4,35 +4,35 @@ from wordcloud import WordCloud
 
 class FileNotFoundError(Exception):
 
-    def _init_(self, message):
+    def __init__(self, message):
         self.message = message
-        super()._init_()
+        super().__init__()
 
-    def _str_(self):
+    def __str__(self):
         return f"File not found: {self.message}"
 
 
 class InvalidInputDataError(Exception):
-    def _init_(self, message):
+    def __init__(self, message):
         self.message = message
-        super()._init_()
+        super().__init__()
 
-    def _str_(self):
+    def __str__(self):
         return f"Invalid input data: {self.message}"
 
 
 class DiskSpaceFullError(Exception):
-    def _init_(self, message):
+    def __init__(self, message):
         self.message = message
-        super()._init_()
+        super().__init__()
 
-    def _str_(self):
+    def __str__(self):
         return f"Disk space full: {self.message}"
 
 
-def read_input_data(file_path):
+def read_input_data(input_file):
     try:
-        with open(file_path, "r") as file:
+        with open(input_file, "r") as file:
             return file.read()
     except FileNotFoundError:
         raise FileNotFoundError("Invalid file path or file not found")
@@ -54,9 +54,9 @@ def process_text_data(data: str):
         raise InvalidInputDataError("Invalid input data")
 
 
-def store_processed_results(output_file_path, results, count):
+def store_processed_results(output_file, results, count):
     try:
-        with open(output_file_path, "w") as file:
+        with open(output_file, "w") as file:
             file.write(f"Total words: {count}\n")
             for word, count in results.items():
                 file.write(f"{word}: {count}\n")
@@ -70,29 +70,24 @@ def build_word_cloud(frequency):
     for word, count in frequency.items():
         comment_words += (word + " ") * count
 
-    wordcloud = WordCloud(
-        width=600,
-        height=600,
-        background_color="black",
-        min_font_size=8,
-        stopwords=set(),
-    ).generate(comment_words)
+    wordcloud = WordCloud(width=600,height=600,background_color="black",min_font_size=8,stopwords=set()).generate(comment_words)
 
     plt.figure(figsize=(6, 6), facecolor=None)
     plt.imshow(wordcloud)
     plt.axis("off")
-    plt.tight_layout(pad=0)
+    plt.tight_layout()
     plt.show()
 
 
+print("Name: Dev Mehta\nRoll No: 22BCP282")
 
-file_path = input("Enter the input file path: ")
+input_file = 'dev.txt'
 
-data = read_input_data(file_path)
+data = read_input_data(input_file)
 
-frequency, count = process_text_data(data)
+words, count = process_text_data(data)
 
-output_file_path = input("Enter the output file path: ")
-store_processed_results(output_file_path, frequency, count)
-build_word_cloud(frequency)
+output_file = 'result.txt'
+store_processed_results(output_file, words, count)
+build_word_cloud(words)
 print("Text processing completed successfully!")

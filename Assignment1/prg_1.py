@@ -1,5 +1,7 @@
 from datetime import datetime
 
+print("Name: Dev Mehta\nRoll No: 22BCP282")
+
 log1 = open("log1.txt","r")
 log2 = open("log2.txt","r")
 log3 = open("log3.txt","r")

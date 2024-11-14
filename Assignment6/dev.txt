@@ -1,7 +1,45 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Vestibulum vulputate, arcu in laoreet lacinia, turpis enim mollis purus, 
-sit amet vehicula justo turpis nec eros. Quisque at lorem ac magna efficitur efficitur.
-Curabitur nec leo quis enim consequat malesuada.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-Vestibulum vulputate, arcu in laoreet lacinia, turpis enim mollis purus.
+Education
+Pandit Deendayal Energy University
+B.Tech in Computer Engineering
+CGPA: 9.56
+Skills
++91-9106928542 •
+Dev Mehta
+Languages: C, C++, Python, HTML, JavaScript, Golang Frameworks: Express.js, React.js
+Database: MongoDB, MySQL
+Dev-Tools: Git, GitHub, Linux, Postman
+DevOps: Docker, Kubernetes, Jenkins Cloud: AWS
+Experience
+Cakelaya
+Full Stack Developer Intern
+Sept 2024–Nov 2024
+# mehtadev92@gmail.com § DevMehta22
+• ð dev-mehta-061b36248
+Gandhinagar, Gujarat, India
+2022–2026
+○ Designed the admin dashboard, enhancing proficiency in React concepts.
+○ Implemented user authentication and authorization using JWT.
+○ Optimized cron job management, reducing processing time for app notifications, emails and report generation by 50% with the
+implementation of BullMQ.
+○ Developed logging feature using Winston, improving error retrieval speed by 60%, also studied about cache eviction policies.
+○ Containerized backend services using Docker.
+Projects
+Job Portal: GitHub Repository
+Technologies: MySQL, Node.js, React.js, Express.js, Docker A job portal application for candidates and recruiters.
+○ Utilized MVC (Model-View-Controller) pattern for project structure.
+○ Implemented user authentication, job posting, and profile management.
+○ Enhanced http headers security with Helmet and logging with Morgan.
+○ Containerized the application using Docker.
+End-to-End DevOps Project: GitHub Repository Technologies: Node.js, React.js, Docker, Jenkins, Kubernetes
+○ Improved deployment efficiency through successful containerization.
+○ Established a CI/CD pipeline, reducing manual errors.
+○ Orchestrated deployment on Kubernetes for scalability.
+Dwellify (Hackathon Project): GitHub Repository Technologies: MongoDB, Node.js, Express.js
+Implemented CI/CD pipeline and containerization.
+Real-estate web application for property sales.
+○ Contributed to the implementation of subscription management with Stripe’s API.
+○ Integrated image storage functionality using Multer.
+○ Implemented Microservice architecture for project structure.
+Positions of Responsibility
+Cloud & DevOps Head: Encode-Computer Science Club of PDEU Technical Head: Anirveda-Techno Economics Club of PDEU
+Jul 2024–Present Jun 2024–Present

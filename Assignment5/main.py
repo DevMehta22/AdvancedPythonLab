@@ -40,6 +40,7 @@ def process_data_and_store(json_data, output_file):
 
 directory = '/Users/devmehta/Desktop/LAB_sem5/Python_prg/python_main/Assignment5/Covid_data'
 
+print("Name: Dev Mehta\nRoll No: 22BCP282")
 json_data = read_json_files(directory)
 output_file = 'covid_summary.json'
 processed_data = process_data_and_store(json_data, output_file)

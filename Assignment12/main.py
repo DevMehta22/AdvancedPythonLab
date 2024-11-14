@@ -4,10 +4,8 @@ import matplotlib.pyplot as plt
 import shutil
 import os
 
-# File name for expenses data
 CSV_FILE = 'expenses.csv'
 
-# Expense Logging
 def log_expense():
     try:
         name = input("Enter your name: ")
@@ -27,7 +25,6 @@ def log_expense():
     except Exception as e:
         print(f"Error logging expense: {e}")
 
-# Expense Analysis
 def analyze_expenses():
     try:
         df = pd.read_csv(CSV_FILE)
@@ -42,7 +39,6 @@ def analyze_expenses():
     except Exception as e:
         print(f"Error analyzing expenses: {e}")
 
-# Expense Trends
 def plot_expense_trends():
     try:
         df = pd.read_csv(CSV_FILE)
@@ -54,13 +50,12 @@ def plot_expense_trends():
         plt.xlabel("Date")
         plt.ylabel("Cumulative Expenses")
         plt.title("Expense Trends Over the Last Month")
-        plt.xticks(rotation=45)
+        plt.xticks()
         plt.tight_layout()
         plt.show()
     except Exception as e:
         print(f"Error generating expense trends: {e}")
 
-# Monthly Report with Category Breakdown
 def monthly_report(month, year):
     try:
         df = pd.read_csv(CSV_FILE)
@@ -84,7 +79,6 @@ def monthly_report(month, year):
     except Exception as e:
         print(f"Error generating monthly report: {e}")
 
-# Expense Budgeting
 def set_budget():
     budgets = {}
     categories = input("Enter categories (comma-separated): ").split(',')
@@ -110,7 +104,6 @@ def check_budget():
     except Exception as e:
         print(f"Error checking budget: {e}")
 
-# Data Backup and Restore
 def backup_data():
     try:
         shutil.copy(CSV_FILE, 'backup_' + CSV_FILE)
@@ -128,8 +121,8 @@ def restore_data():
     except Exception as e:
         print(f"Error restoring data: {e}")
 
-# Main program loop
 def main():
+    print("Name: Dev Mehta\nRoll No: 22BCP282")
     while True:
         print("\nHousehold Expense Management")
         print("1. Log Expense")

@@ -1,11 +1,11 @@
 Train ID,Train Name,Source Station,Destination Station,Total Seats,Available Seats,Fare
-EXP12345,Shatabdi Express,Mumbai,Delhi,1000,980,1500
-SUP67890,Rajdhani Express,Delhi,Kolkata,1200,1170,2000
-INT11223,Duronto Express,Kolkata,Chennai,900,890,1800
-REG33445,Pune Express,Pune,Bangalore,800,760,1200
-LOC55667,Garib Rath,Patna,Mumbai,1100,1080,1000
-INT77889,Yuva Express,Bangalore,Hyderabad,950,940,1300
-REG89012,Intercity Express,Lucknow,Varanasi,700,680,800
-LOC34567,Jan Shatabdi,Bhopal,Mumbai,850,820,1400
-EXP90908,Goa Express,Goa,Pune,1200,1190,1600
-SUP60606,Chennai Express,Chennai,Bangalore,1300,1280,1700
+EXP12345,Shatabdi Express,Mumbai,Delhi,1000,940,1500
+SUP67890,Rajdhani Express,Delhi,Kolkata,1200,1110,2000
+INT11223,Duronto Express,Kolkata,Chennai,900,870,1800
+REG33445,Pune Express,Pune,Bangalore,800,680,1200
+LOC55667,Garib Rath,Patna,Mumbai,1100,1040,1000
+INT77889,Yuva Express,Bangalore,Hyderabad,950,920,1300
+REG89012,Intercity Express,Lucknow,Varanasi,700,640,800
+LOC34567,Jan Shatabdi,Bhopal,Mumbai,850,760,1400
+EXP90908,Goa Express,Goa,Pune,1200,1170,1600
+SUP60606,Chennai Express,Chennai,Bangalore,1300,1240,1700

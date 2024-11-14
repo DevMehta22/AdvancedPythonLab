@@ -1,18 +1,25 @@
 import pandas as pd
-from reportlab.lib.pagesizes import A4
-from reportlab.platypus import SimpleDocTemplate, Table
+from fpdf import FPDF
 from datetime import datetime
 import os
+
+class PDF(FPDF):
+    def header(self):
+        self.set_font("Arial", "B", 12)
+        self.cell(0, 10, "Invoice", 0, 1, "C")
+
+    def add_table_row(self, label, value):
+        self.set_font("Arial", "", 10)
+        self.cell(50, 10, label, border=1)
+        self.cell(0, 10, str(value), border=1, ln=True)
 
 def load_orders(file):
     try:
         required_columns = ['Order ID', 'Customer Name', 'Product Name', 'Quantity', 'Unit Price']
-
         df = pd.read_csv(file, usecols=required_columns)
 
         df['Quantity'] = pd.to_numeric(df['Quantity'], errors='coerce')
         df['Unit Price'] = pd.to_numeric(df['Unit Price'], errors='coerce')
-        
         df.dropna(subset=['Quantity', 'Unit Price'], inplace=True)
         
         orders = df.to_dict('records')
@@ -31,22 +38,18 @@ def create_pdf_with_table(order, folder):
             os.makedirs(folder)
 
         pdf_path = os.path.join(folder, f"invoice_{order['Order ID']}.pdf")
-        doc = SimpleDocTemplate(pdf_path, pagesize=A4)
+        pdf = PDF()
+        pdf.add_page()
 
-        table_data = [
-            ["Invoice Number", order['Order ID']],
-            ["Date of Purchase", datetime.now().strftime('%Y-%m-%d')],
-            ["Customer Name", order['Customer Name']],
-            ["Product Name", order['Product Name']],
-            ["Quantity", order['Quantity']],
-            ["Unit Price", f"${order['Unit Price']:.2f}"],
-            ["Total Amount", f"${order['Quantity'] * order['Unit Price']:.2f}"]
-        ]
+        pdf.add_table_row("Invoice Number", order['Order ID'])
+        pdf.add_table_row("Date of Purchase", datetime.now().strftime('%Y-%m-%d'))
+        pdf.add_table_row("Customer Name", order['Customer Name'])
+        pdf.add_table_row("Product Name", order['Product Name'])
+        pdf.add_table_row("Quantity", order['Quantity'])
+        pdf.add_table_row("Unit Price", f"${order['Unit Price']:.2f}")
+        pdf.add_table_row("Total Amount", f"${order['Quantity'] * order['Unit Price']:.2f}")
 
-        invoice_table = Table(table_data)
-
-        doc.build([invoice_table])
-
+        pdf.output(pdf_path)
         print(f"Invoice created: {pdf_path}")
 
     except PermissionError:
@@ -66,6 +69,8 @@ def generate_invoices():
             create_pdf_with_table(order, invoices_folder)
         except Exception as e:
             print(f"An error occurred while processing order {order['Order ID']}: {e}")
+
+print("Name: Dev Mehta\nRoll No: 22BCP282")
 
 try:
     generate_invoices()

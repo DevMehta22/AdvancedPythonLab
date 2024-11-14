@@ -45,6 +45,8 @@ def generate_report_2():
     report_2.to_csv("report_train_revenue.csv", index=False)
     print("Report 2 generated: report_train_revenue.csv")
 
+print("Name: Dev Mehta\nRoll No: 22BCP282")
+
 for index, row in passenger_details.iterrows():
     print(book_tickets(row['Passenger Name'], row['Train ID']))
 

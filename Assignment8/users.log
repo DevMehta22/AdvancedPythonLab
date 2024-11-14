@@ -13,3 +13,7 @@
 2024-10-03 15:44:46,558 - WARNING - Login failed for username: Devmenhta due to incorrect password.
 2024-10-03 15:46:12,649 - INFO - User 'Devmenhta' logged in successfully.
 2024-10-03 15:46:39,735 - INFO - Program exited by the user.
+2024-11-13 11:32:06,408 - WARNING - Signup attempt failed for username: Dev
+2024-11-13 11:32:11,870 - WARNING - Login attempt failed for username: Dev due to invalid credentials.
+2024-11-13 11:33:33,146 - INFO - User 'hello' registered successfully.
+2024-11-13 11:33:40,927 - INFO - User 'hello' logged in successfully.
