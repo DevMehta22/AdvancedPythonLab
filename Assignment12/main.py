@@ -4,9 +4,9 @@ import matplotlib.pyplot as plt
 import shutil
 import os
 
-CSV_FILE = 'expenses.csv'
+input_file = 'expenses.csv'
 
-def log_expense():
+def add_expense():
     try:
         name = input("Enter your name: ")
         date = input("Enter date (YYYY-MM-DD): ")
@@ -16,10 +16,10 @@ def log_expense():
 
         new_data = pd.DataFrame([[name, date, description, amount, category]],
                                 columns=['Name', 'Date', 'Description', 'Amount', 'Category'])
-        if os.path.exists(CSV_FILE):
-            new_data.to_csv(CSV_FILE, mode='a', header=False, index=False)
+        if os.path.exists(input_file):
+            new_data.to_csv(input_file, mode='a', header=False, index=False)
         else:
-            new_data.to_csv(CSV_FILE, mode='w', index=False)
+            new_data.to_csv(input_file, mode='w', index=False)
         
         print("Expense logged successfully!")
     except Exception as e:
@@ -27,7 +27,7 @@ def log_expense():
 
 def analyze_expenses():
     try:
-        df = pd.read_csv(CSV_FILE)
+        df = pd.read_csv(input_file)
         member_totals = df.groupby('Name')['Amount'].sum()
         total_expenses = df['Amount'].sum()
         days = (datetime.now() - datetime.strptime(df['Date'].min(), "%Y-%m-%d")).days + 1
@@ -41,7 +41,7 @@ def analyze_expenses():
 
 def plot_expense_trends():
     try:
-        df = pd.read_csv(CSV_FILE)
+        df = pd.read_csv(input_file)
         df['Date'] = pd.to_datetime(df['Date'])
         daily_expense = df.groupby('Date')['Amount'].sum().cumsum()
 
@@ -58,7 +58,7 @@ def plot_expense_trends():
 
 def monthly_report(month, year):
     try:
-        df = pd.read_csv(CSV_FILE)
+        df = pd.read_csv(input_file)
         df['Date'] = pd.to_datetime(df['Date'])
         monthly_df = df[(df['Date'].dt.month == month) & (df['Date'].dt.year == year)]
 
@@ -88,7 +88,7 @@ def set_budget():
 
 def check_budget():
     try:
-        df = pd.read_csv(CSV_FILE)
+        df = pd.read_csv(input_file)
         budgets = set_budget()
         df['Date'] = pd.to_datetime(df['Date'])
         monthly_df = df[df['Date'].dt.month == datetime.now().month]
@@ -106,15 +106,15 @@ def check_budget():
 
 def backup_data():
     try:
-        shutil.copy(CSV_FILE, 'backup_' + CSV_FILE)
+        shutil.copy(input_file, 'backup_' + input_file)
         print("Backup created successfully.")
     except Exception as e:
         print(f"Error creating backup: {e}")
 
 def restore_data():
     try:
-        if os.path.exists('backup_' + CSV_FILE):
-            shutil.copy('backup_' + CSV_FILE, CSV_FILE)
+        if os.path.exists('backup_' + input_file):
+            shutil.copy('backup_' + input_file, input_file)
             print("Data restored from backup.")
         else:
             print("No backup file found.")
@@ -125,7 +125,7 @@ def main():
     print("Name: Dev Mehta\nRoll No: 22BCP282")
     while True:
         print("\nHousehold Expense Management")
-        print("1. Log Expense")
+        print("1. Add Expense")
         print("2. Analyze Expenses")
         print("3. View Expense Trends")
         print("4. Generate Monthly Report")
@@ -137,7 +137,7 @@ def main():
         choice = input("Choose an option: ")
 
         if choice == '1':
-            log_expense()
+            add_expense()
         elif choice == '2':
             analyze_expenses()
         elif choice == '3':

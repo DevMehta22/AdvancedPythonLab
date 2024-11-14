@@ -57,11 +57,3 @@ print(train_report)
 generate_report_2()
 revenue_report = pd.read_csv("report_train_revenue.csv")
 print(revenue_report)            
-
-    
-    
-    
-
-
-
-
