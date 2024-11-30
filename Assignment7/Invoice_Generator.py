@@ -2,6 +2,7 @@ import pandas as pd
 from fpdf import FPDF
 from datetime import datetime
 import os
+from PyPDF2 import PdfMerger
 
 class PDF(FPDF):
     def header(self):
@@ -23,6 +24,7 @@ def load_orders(file):
         df.dropna(subset=['Quantity', 'Unit Price'], inplace=True)
         
         orders = df.to_dict('records')
+        print(orders)
         return orders
     except FileNotFoundError:
         print(f"Error: The file '{file}' was not found.")
@@ -51,11 +53,31 @@ def create_pdf_with_table(order, folder):
 
         pdf.output(pdf_path)
         print(f"Invoice created: {pdf_path}")
+        return pdf_path
 
     except PermissionError:
         print(f"Error: Permission denied while creating invoice '{order['Order ID']}'.")
     except Exception as e:
         print(f"An unexpected error occurred while generating the invoice for order {order['Order ID']}: {e}")
+    return None
+
+def merge_invoices(folder, output_file):
+    try:
+        pdf_files = [os.path.join(folder, file) for file in os.listdir(folder) if file.endswith(".pdf")]
+        if not pdf_files:
+            print("No PDF files found to merge.")
+            return
+
+        merger = PdfMerger()
+        for pdf in pdf_files:
+            merger.append(pdf)
+
+        output_path = os.path.join(folder, output_file)
+        merger.write(output_path)
+        merger.close()
+        print(f"All invoices merged into: {output_path}")
+    except Exception as e:
+        print(f"An error occurred while merging PDFs: {e}")
 
 def generate_invoices():
     orders_file = 'orders.csv'
@@ -64,11 +86,17 @@ def generate_invoices():
         print("No valid orders found to process. Exiting.")
         return
     invoices_folder = 'invoices'
+    generated_pdfs = []
     for order in orders:
         try:
-            create_pdf_with_table(order, invoices_folder)
+            pdf_path = create_pdf_with_table(order, invoices_folder)
+            if pdf_path:
+                generated_pdfs.append(pdf_path)
         except Exception as e:
             print(f"An error occurred while processing order {order['Order ID']}: {e}")
+
+    # Merge all generated PDFs into a single PDF
+    merge_invoices(invoices_folder, "all_invoices.pdf")
 
 print("Name: Dev Mehta\nRoll No: 22BCP282")
 
